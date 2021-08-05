@@ -57,6 +57,7 @@
     "yup": "^0.29.3"
   },
   "scripts": {
+    "start:server":"NODE_ENV=production node src/server/index.js",
     "start": "NODE_ENV=development NODE_OPTIONS=--max_old_space_size=4096 webpack-dev-server --config config/webpack.config.dev.js --open --color",
     "build": "NODE_ENV=production NODE_OPTIONS=--max_old_space_size=4096 webpack --config config/webpack.config.prod.js --progress --color",
     "static:icons": "gulp iconfont",
@@ -143,6 +144,8 @@
     "terser-webpack-plugin": "^4.2.2",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-manifest-plugin": "^4.0.2",
+    "webpack-nano": "^1.1.1"
   }
 }

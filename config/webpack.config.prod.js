@@ -9,6 +9,8 @@ const TerserPlugin = require('terser-webpack-plugin')
 const aliases = require('./aliases')
 const { paths } = require('./constants')
 
+const { WebpackManifestPlugin } = require('webpack-manifest-plugin')
+
 module.exports = {
   entry: paths.entry,
   bail: true,
@@ -85,7 +87,9 @@ module.exports = {
       ignoreOrder: false,
       filename: '[name].[hash].css',
       chunkFilename: '[id].[hash].css'
-    })
+    }),
+
+    new WebpackManifestPlugin()
   ],
   module: {
     rules: [
