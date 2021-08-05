@@ -1,0 +1,26 @@
+.iconI {
+  background-image: url("{{{spritesheet.escaped_image}}}");
+  background-repeat: no-repeat;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2 / 1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+
+  .iconI {
+    background-image: url("{{{retina_spritesheet.escaped_image}}}");
+    background-size: {{spritesheet.px.width}} {{spritesheet.px.height}};
+  }
+}
+
+{{#items}}
+.iconI-{{name}} {
+  background-position: {{px.offset_x}} {{px.offset_y}};
+  width: {{width}};
+  height: {{px.height}};
+}
+
+{{/items}}

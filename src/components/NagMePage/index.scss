@@ -1,0 +1,46 @@
+.nagme-top-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.nagme-table {
+    table {
+        th {
+            font-weight: 500 !important;
+            letter-spacing: 0.26px;
+            font-family: "Lato",sans-serif;
+            font-size: 16px !important;
+            padding: 10px 16px;
+            text-align: center !important;
+            line-height: 19px;
+            &:first-child {
+                text-align: left !important;
+                border-radius: 4px 0 0 0;
+            }
+            &:last-child {
+                border-radius: 0 8px 0 0;
+            }
+        }
+        td {
+            font-size: 15px !important;
+            text-align: center !important;
+            padding: 5px 16px !important;
+            line-height: 19px;
+            letter-spacing: 0.32px;
+            font-family: "Lato",sans-serif !important;
+            font-weight: normal !important;
+            white-space: nowrap;
+            &:first-child {
+                text-align: left !important;
+            }
+            &:nth-child(5) {
+                white-space: normal;
+            }
+            &:last-child {
+                vertical-align: top;
+            }
+        }
+    }
+}

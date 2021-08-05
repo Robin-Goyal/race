@@ -1,0 +1,53 @@
+@import '../../../../assets/styles/variables';
+
+.form-radio {
+  &__wrapper {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+  }
+
+  &__mark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 26px;
+    width: 26px;
+    background-color: $color-grey;
+    border-radius: 50%;
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: none;
+      left: 6px;
+      top: 6px;
+      width: 14px;
+      height: 14px;
+      background: $color-white;
+      border-radius: 50%;
+    }
+  }
+
+  &:hover input ~ .form-radio__mark {
+    background-color: $color-grey;
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    &:checked ~ .form-radio__mark {
+      background-color: $color-primary;
+
+      &::after {
+        display: block;
+      }
+    }
+  }
+}

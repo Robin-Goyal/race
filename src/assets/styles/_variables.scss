@@ -1,0 +1,25 @@
+$rem-baseline: 16px;
+
+$grid-columns: 12 !default;
+
+$xs-max: 575px !default;
+$sm-max: 768px !default;
+$md-max: 1260px !default;
+$lg-max: 1440px !default;
+$xl-max: 1680px !default;
+
+$gutter: 1rem !default;
+
+$content-well-max-width: 1260px !default; // Container width
+
+$drawerWidth: 240px;
+
+$color-primary: #4db6ac;
+$color-primary-light: #78C7C0;
+$color-white: #fff;
+$color-grey: #eee;
+
+/* LEADER_BOARD color */
+$first-place-color: #FFD700;
+$second-place-color: #c0c0c0;
+$third-place-color: #CD7F32;

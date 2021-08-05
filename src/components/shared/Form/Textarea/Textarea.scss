@@ -1,0 +1,28 @@
+@import '../../../../assets/styles/variables';
+@import '../../../../assets/styles/mixins/placeholder';
+
+.form-textarea {
+  display: block;
+  margin: 10px 0;
+
+  &__wrapper {
+    @include placeholder {
+      color: $color-grey;
+    }
+  }
+
+  &__label {
+    display: block;
+  }
+
+  &__field {
+    width: 100%;
+    resize: none;
+    border: 1px solid $color-grey;
+
+    &:focus {
+      outline: none;
+      border: 1px solid $color-primary;
+    }
+  }
+}

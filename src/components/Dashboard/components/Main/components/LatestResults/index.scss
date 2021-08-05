@@ -1,0 +1,40 @@
+@import '../../../../../../assets/styles/variables';
+
+.dashboard-latest-data {
+  margin-top: 15px;
+  &-comment {
+    margin-top: 10px;
+    background-color: #fff;
+    color: #000000de;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    box-shadow: 0px 3px 1px -2px #00000033, 0px 2px 2px 0px #00000024, 0px 1px 5px 0px #0000001f;
+  }
+  .leader-board-table-section-header-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    &-heading {
+      padding-right: 10px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+    }
+    &-subheading {
+      font-size: 12px;
+      color: #A4AFB7;
+      padding-top: 2px;
+      padding-bottom: 2px;
+    }
+  }
+  span.bold-data {
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  .negative-values {
+    color: red
+  }
+  .positive-values {
+    color: green
+  }
+}

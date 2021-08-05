@@ -1,0 +1,18 @@
+.form-textarea__field {
+    .MuiOutlinedInput-multiline {
+        padding: 10px
+    }
+}
+.form-textarea {
+    margin: 5px 0 !important;
+}
+.form-textarea__wrapper {
+    .MuiTypography-root {
+        color: #b1b1b1
+    }
+    .MuiTypography-colorError {
+        color: #f44336;
+        text-align: left;
+        font-size: 13px;
+    }
+}

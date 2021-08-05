@@ -1,0 +1,137 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mixins/placeholder';
+
+.form-input {
+  display: block;
+  position: relative;
+  margin: 5px 0;
+
+  &--labeled {
+    margin-top: 30px;
+  }
+
+  &__wrapper {
+    position: relative;
+
+    &--range {
+      padding: 0 8px;
+    }
+    .comment-right-section {
+      position: absolute;
+      right: 20px;
+      top: 0;
+      bottom: 0;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      @media screen and (max-width: 500px) {
+        position: relative;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+      .comment-loader {
+        margin-right: 10px;
+      }
+      .comments-count {
+        display: flex;
+        align-items: flex-start;
+      }
+      .comments-reply {
+        color: $color-primary;
+        font-size: 16px;
+        @media screen and (max-width: 500px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__label {
+    display: block;
+    position: absolute;
+
+    &--placeholder {
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      z-index: 1;
+
+      &-filled {
+        top: -1rem;
+        left: 0;
+      }
+    }
+
+    &--range {
+      position: initial;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px 0;
+    border-color: #e2e2e3
+
+    &:not([value]) {
+      + .form-input__label--placeholder {
+        top: -1rem;
+        left: 0;
+      }
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $color-primary;
+
+      + .form-input__label--placeholder {
+        top: -1rem;
+        left: 0;
+      }
+    }
+
+    &--icon {
+      padding-right: 24px;
+    }
+
+    .MuiInputBase-root {
+      border-radius: 30px;
+    }
+
+    .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+      border-color: $color-primary;
+    }
+
+    .MuiOutlinedInput-input {
+      padding: 0 230px 0 20px;
+      font-size: 14px;
+      text-overflow: ellipsis;
+      @media screen and (max-width: 500px) {
+        padding: 0 20px 0 20px;
+      }
+    }
+
+    &.post-reply-input {
+      .MuiOutlinedInput-input {
+        padding: 0 100px 0 20px;
+        @media screen and (max-width: 500px) {
+          padding: 0 20px 0 20px;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    font-size: 16px;
+  }
+}

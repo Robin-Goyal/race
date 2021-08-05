@@ -1,0 +1,41 @@
+stages:
+  - build_dev
+  - deploy_dev
+
+build_dev:
+  image: node:12
+  stage: build_dev
+  script:
+    - export API_URL=$(eval echo \$api_url_$CI_COMMIT_REF_NAME) > .env
+    - npm install
+    - npm run $(eval echo \$build_arg_$CI_COMMIT_REF_NAME)
+  artifacts:
+    name: "$CI_COMMIT_REF_SLUG"
+    expire_in: 1 hour
+    paths:
+      - dist/
+  only:
+    - develop
+  when: manual
+  environment:
+    name: $CI_COMMIT_REF_NAME
+  tags:
+    - docker
+
+deploy_dev:
+  image: registry.gitlab.com/gitlab-org/cloud-deploy/aws-base:latest
+  stage: deploy_dev
+  script:
+    - export AWS_ACCESS_KEY_ID=$(eval echo \$aws_access_key_$CI_COMMIT_REF_NAME)
+    - export AWS_SECRET_ACCESS_KEY=$(eval echo \$aws_secret_access_key_$CI_COMMIT_REF_NAME)
+    - aws s3 rm s3://$(eval echo \$bucket_$CI_COMMIT_REF_NAME) --recursive
+    - aws s3 cp dist/ s3://$(eval echo \$bucket_$CI_COMMIT_REF_NAME) --recursive
+    - aws cloudfront create-invalidation --distribution-id $(eval echo \$cloudfront_$CI_COMMIT_REF_NAME) --paths \/\*
+    - curl -X POST -H "Content-type:application/json" --data "{\"text\":\"*react.ratingtheraces.com*  has been updated by *$GITLAB_USER_LOGIN*\", \"channel\":\"#ratingtheraces_dev\"}" $slack_webhook_url
+  when: manual
+  only:
+    - develop
+  environment:
+    name: $CI_COMMIT_REF_NAME
+  tags:
+    - docker

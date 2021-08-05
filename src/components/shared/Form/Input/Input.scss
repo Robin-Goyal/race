@@ -1,0 +1,88 @@
+@import '../../../../assets/styles/variables';
+@import '../../../../assets/styles/mixins/placeholder';
+
+.form-input {
+  display: block;
+  position: relative;
+  margin: 10px 0;
+
+  &--labeled {
+    margin-top: 30px;
+  }
+
+  &__wrapper {
+    @include placeholder {
+      color: $color-grey;
+    }
+
+    position: relative;
+
+    &--range {
+      padding: 0 8px;
+    }
+  }
+
+  &__label {
+    display: block;
+    position: absolute;
+
+    &--placeholder {
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      z-index: 1;
+
+      &-filled {
+        top: -1rem;
+        left: 0;
+      }
+    }
+
+    &--range {
+      position: initial;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px 10px;
+
+    &:not([value]) {
+      + .form-input__label--placeholder {
+        top: -1rem;
+        left: 0;
+      }
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $color-primary;
+
+      + .form-input__label--placeholder {
+        top: -1rem;
+        left: 0;
+      }
+    }
+
+    &--icon {
+      padding-right: 24px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    font-size: 16px;
+  }
+
+  &__password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+  }
+}

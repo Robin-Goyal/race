@@ -1,0 +1,36 @@
+@import '../../../../assets/styles/variables';
+
+.form-file {
+  &__dropzone {
+    background: $color-grey;
+    padding: 20px;
+    border: 2px dashed darken($color-grey, 10%);
+    text-align: center;
+  }
+
+  &__thumbs-list {
+    background: $color-grey;
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 20px 0 20px;
+    list-style: none;
+  }
+
+  &__thumb {
+    display: block;
+    background-size: cover;
+    position: relative;
+
+    &-btn {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+    }
+
+    &--img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}

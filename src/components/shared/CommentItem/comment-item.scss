@@ -1,0 +1,104 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mixins/placeholder';
+
+.rtr-race-comments {
+  margin-bottom: 20px;
+}
+
+.rtr-comment-item {
+  padding-bottom: 10px;
+  margin: 0 20px 15px;
+  border-bottom: 1px solid #a4afb7;
+  .rtr-comment-wrap {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    font-size: 15px;
+    font-family: 'Lato', sans-serif;
+    .rtr-comment-left-section, .rtr-comment-right-section, .rtr-comment-action, .rtr-comment-section-author {
+      display: flex;
+      align-items: center;
+    }
+    .rtr-comment-right-section {
+      white-space: nowrap;
+      // margin-left: 10px;
+    }
+    .rtr-comment-margin-right {
+      margin-right: 10px;
+    }
+    .rtr-comment-section-author-time {
+      color: #A4AFB7;
+      font-size: 13px;
+    }
+    .rtr-comment-section-author-name {
+      color: #11141A;
+      font-size: 15px;
+      font-weight: bold;
+      letter-spacing: .35px;
+    }
+    .rtr-comment-section-text {
+      color: #5F6568;
+      font-size: 15px;
+      line-height: 1.4;
+      white-space: pre-line;
+      span {
+        font-size: 14px;
+        font-weight: 700;
+      }
+    }
+    .rtr-comment-section-author {
+      margin-bottom: 5px;
+    }
+    .rtr-comment-section {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .rtr-comment-reply-section {
+    margin-left: 30px;
+  }
+  .rtr-comment-inner-list-section {
+    margin-left: 30px;
+    margin-top: 5px;
+    .rtr-comment-child-item {
+      margin-top: 10px;
+    }
+    .rtr-comment-wrap {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .rtr-comment-item {
+    .rtr-comment-wrap {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .rtr-comment-item {
+    .rtr-comment-wrap {
+      .rtr-comment-left-section {
+        align-items: flex-start;
+      }
+      .rtr-comment-section-author {
+        flex-direction: column;
+        align-items: flex-start;
+        .rtr-comment-section-author-time {
+          margin-top: 4px;
+        }
+      }
+    }
+    .rtr-comment-inner-list-section {
+      .rtr-comment-wrap {
+        .rtr-comment-right-section {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    }
+  }
+}

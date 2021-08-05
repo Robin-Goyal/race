@@ -1,0 +1,111 @@
+::-webkit-scrollbar {
+    width: 0px;
+    height: 20px;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+.MuiDialogContent-root::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 2px !important;
+    background: $color-primary !important;
+    border: 0 !important;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: $color-primary-light; 
+}
+
+#page-inner {
+    width: 100%;
+    min-height: 800px;
+    .row {
+        margin-bottom: 15px;
+    }
+}
+
+.text-center {
+    text-align:center;
+}
+.no-boder {
+    border:1px solid #f3f3f3;
+}
+.alert {
+    border-radius: 0px;
+}
+.square-btn-adjust {
+    border: 0px solid transparent;
+   -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+.panel{
+    border-radius:0px;
+}
+.text-muted {
+    color: #213452;
+}
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    /* padding: 4px 7px; */
+    font-size: 11px;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: #F09B22;
+    border-radius: 10px;
+}
+.remove-padding {
+    padding-right:0 !important;
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+}
+.remove-padding-1 {
+    padding: 0 !important;
+}
+.remove-margin {
+    margin-top: 0;
+}
+.spacex1 {
+    margin-left: 25px;
+}
+
+#responsive-dialog-title {
+    background: $color-primary;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.rtr-loading-message {
+    margin-top: 20px;
+}
+
+.MuiDialog-container .MuiDialogActions-root {
+    margin-top: 10px;
+    padding-right: 0;
+    padding-left: 0;
+    &.MuiPickersModal-withAdditionalAction {
+        padding: 10px 10px 10px 16px !important;
+    }
+}
+
+.MuiSvgIcon-root {
+    &.jss25 {
+        background-color: transparent !important
+    }
+}

@@ -1,0 +1,27 @@
+.date-filter {
+  .MuiInput-root {
+    font-size: 13px;
+    font-family: "Lato",sans-serif;
+    font-weight: 900;
+  }
+  .MuiInput-underline:before, .MuiInput-underline:after {
+    content: none;
+  } 
+  button {
+    padding: 0px !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding-right: 2px !important;
+  }
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+  input {
+    padding-left: 10px;
+    letter-spacing: .48px;
+    font-size: 14px;
+    color: #4d4f5c;
+    font-weight: 700;
+  }
+}

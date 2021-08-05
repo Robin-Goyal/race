@@ -1,0 +1,26 @@
+@import './base';
+@import './grid/grid';
+@import './icons';
+@import './mixins/remify';
+@import './header';
+@import './common';
+
+html {
+  font-size: 14px;
+  @media #{$breakpoint-md-up} {
+    @include rem-baseline(100%);
+  }
+}
+
+.root-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #F7F8FA;
+
+  &__content {
+    flex: 1;
+    overflow: auto;
+    position: relative;
+  }
+}

@@ -1,0 +1,25 @@
+.nagme-modal {
+  padding: 16px 24px;
+
+  &__button {
+    font-size: 16px;
+  }
+
+  &__selected-runs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 20px 0 20px auto;
+
+    .form-select {
+      margin: 0 10px 0 0;
+      flex-grow: 1;
+      max-width: 60%;
+      font-family: 'Lato', sans-serif;
+    }
+  }
+
+  .modal__body {
+    overflow: initial;
+  }
+}

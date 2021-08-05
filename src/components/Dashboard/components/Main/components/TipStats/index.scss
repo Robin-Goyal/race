@@ -1,0 +1,106 @@
+@import '../../../../../../assets/styles/variables';
+
+.dashboard-latest-data {
+  margin-top: 15px;
+  .leader-board-table-section-header-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    &-heading {
+      padding-right: 10px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+    }
+    &-subheading {
+      font-size: 12px;
+      color: #A4AFB7;
+      padding-top: 2px;
+      padding-bottom: 2px;
+    }
+  }
+  span.bold-data {
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  .negative-values {
+    color: red
+  }
+  .positive-values {
+    color: green
+  }
+  .stats-table {
+    width: 100%;
+    overflow: auto;
+    &-pagination {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 10px;
+      align-items: center;
+      .MuiPagination-ul {
+        flex-wrap: nowrap;
+      }
+    }
+    .MuiTable-root {
+      width: 99.9%;
+    }
+    .MuiTableHead-root {
+      tr {
+        background-color: #fff !important;
+        th {
+          letter-spacing: 0.8px;
+          white-space: nowrap;
+          > div {
+            justify-content: center;
+          }
+        }
+        &:first-child {
+          th {
+            padding: 8px !important;
+            font-size: 15px !important;
+            border-right: 2px solid #fff;
+            &:first-child {
+              border-radius: 4px 0 0 0;
+            }
+            &:last-child {
+              border-radius: 0 4px 0 0;
+              border-right: 0;
+            }
+          }
+        }
+        &:last-child {
+          th {
+            font-size: 14px !important;
+            white-space: nowrap;
+            background-color: #F9F9F9 !important;
+            color: #A4AFB7 !important;
+            &:first-child, &:nth-child(6), &:nth-child(9), &:nth-child(12) {
+              border-right: 2px solid #fff;
+            }
+          }
+        }
+      }
+    }
+    .MuiTableBody-root {
+      tr {
+        td {
+          border: none !important;
+          border-bottom: 1px solid #e0e0e0 !important;
+          padding: 8px !important;
+        }
+        &:last-child {
+          background-color: #4DB6AC1A;
+          td {
+            color: $color-primary-light;
+            font-weight: 500;
+            &:first-child {
+              border-radius: 4px 0 0 0;
+            }
+            &:last-child {
+              border-radius: 0 4px 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

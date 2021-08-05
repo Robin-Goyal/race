@@ -1,0 +1,120 @@
+@import '../../../../../../assets/styles/variables';
+
+.dashboard-page {
+  .leader-board {
+    &__place {
+      text-align: center;
+      padding: 4px 16px;
+      min-width: 50px;
+      margin-left: 0;
+      float: none;
+      font-size: 14px;
+      line-height: 19px;
+      letter-spacing: 0.32px;
+      font-family: "lato", sans-serif;
+      border-radius: 20px;
+      white-space: nowrap;
+      vertical-align: baseline;
+      transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+      &--first {
+        background-color: $first-place-color;
+      }
+
+      &--second {
+        background-color: $second-place-color;
+      }
+
+      &--third {
+        background-color: $third-place-color;
+      }
+    }
+    &__name {
+      color: $color-primary;
+      white-space: nowrap;
+      text-decoration: none;
+      font-weight: 500!important;
+    }
+    &__twitter-handle {
+      color: $color-primary;
+    }
+    &__pl {
+      svg {
+        margin-left: 5px;
+        cursor: pointer;
+      }
+    }
+    &__times {
+      color: #A4AFB7;
+      font-weight: normal
+    }
+    &__pltoday {
+      color: #A4AFB7;
+      font-weight: normal
+    }
+    &-header-right-section {
+      display: flex;
+      align-items: center;
+      padding-top: 12px;
+    }
+    &-table-section {
+      padding: 15px;
+      padding-top: 5px;
+      background: #fff;
+      border-radius: 2px;
+      &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #e2e2e3;
+        &-title {
+          font-family: "Lato", sans-serif;
+          font-weight: 700;
+          letter-spacing: 0.27px;
+          font-size: 15px;
+          color: #001737;
+        }
+        &-last-updated {
+          overflow: hidden;
+          margin-left: 10px;
+          p {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+    table {
+      th {
+        font-weight: 500 !important;
+        letter-spacing: 0.26px;
+        font-family: "Lato",sans-serif;
+        font-size: 15px !important;
+        line-height: 19px;
+        white-space: nowrap;
+        &:first-child {
+          border-radius: 4px 0 0 0;
+        }
+        &:last-child {
+          border-radius: 0 4px 0 0;
+        }
+      }
+      td {
+        font-size: 14px !important;
+        line-height: 19px;
+        letter-spacing: 0.32px;
+        font-family: "Lato",sans-serif;
+        font-weight: bold;
+        padding: 10px
+      }
+    }
+    #chartjs-tooltip {
+      table {
+        td {
+          font-size: 12px !important;
+          line-height: 1;
+          padding: 0px
+        }
+      }
+    }
+  }
+}

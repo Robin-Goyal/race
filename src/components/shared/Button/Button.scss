@@ -1,0 +1,71 @@
+@import '../../../assets/styles/variables';
+
+.btn {
+  display: inline-block;
+  padding: 6px 16px;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.75;
+  border-radius: 4px;
+  letter-spacing: 0.02857em;
+  background: $color-primary;
+  color: $color-white !important; // Important For links
+  text-decoration: none;
+  border: 1px solid darken($color-primary, 5%);
+  cursor: pointer;
+  transition: 0.2s linear all;
+
+  &:hover {
+    background: darken($color-primary, 10%);
+  }
+
+  &:focus {
+    background: darken($color-primary, 15%);
+    outline: none;
+  }
+
+  &:disabled {
+    background: $color-grey;
+    border-color: $color-grey;
+    cursor: not-allowed;
+
+    &:hover {
+      background: $color-grey;
+    }
+  }
+
+  &--icon {
+    font-weight: normal;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 20px;
+    display: inline-flex;
+    flex-shrink: 0;
+
+    .icon {
+      margin: auto;
+    }
+  }
+
+  &--outline {
+    background: transparent;
+    color: $color-primary !important;
+
+    &:hover {
+      color: $color-white !important;
+      background: $color-primary;
+    }
+
+    &:focus {
+      color: $color-white !important;
+      background: $color-primary;
+      border-color: darken($color-primary, 15%);
+    }
+  }
+
+  &--fluid {
+    width: 100%;
+  }
+}

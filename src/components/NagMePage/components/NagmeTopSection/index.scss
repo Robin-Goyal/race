@@ -1,0 +1,11 @@
+.nagme-heading {
+    display: flex;
+    font-size: 24px !important;
+    align-items: center;
+    white-space: nowrap;
+    justify-content: flex-start;
+    margin: 0 !important;
+    div {
+        margin-left: 10px;
+    }
+}

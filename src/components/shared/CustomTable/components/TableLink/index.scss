@@ -1,0 +1,13 @@
+.custom-table__link {
+  max-width: 220px;
+  padding: 16px;
+  display: block;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  color: rgb(77, 182, 172);
+  transition: all 0.3s ease-in-out;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}

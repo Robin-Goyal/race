@@ -1,0 +1,40 @@
+@import '../../assets/styles/grid/grid';
+@import '../../assets/styles/variables';
+
+.flat-page {
+    h1, h2, h3, h4, h5, h6 {
+        font-family: "lato",sans-serif;
+        color: #001737;
+        margin: 10px 0;
+    }
+    p {
+        font-size: 14px;
+        font-family: "lato",sans-serif;
+        color: #001737;
+    }
+    strong {
+        font-family: "lato",sans-serif;
+        color: #001737;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    h4 {
+        font-size: 18px;
+    }
+    h5 {
+        font-size: 16px;
+    }
+    h6 {
+        font-size: 14px;
+    }
+    &__title {
+        color: $color-primary !important;
+    }
+}

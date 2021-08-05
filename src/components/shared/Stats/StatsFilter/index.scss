@@ -1,0 +1,91 @@
+@import '../../../../assets/styles/variables';
+
+.stats-filters-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.stats-filter {
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  white-space: nowrap;
+  @media screen and (max-width: 400px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__submit-popup {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    right: 0;
+    border: 1px solid rgb(0, 150, 136);
+    border-radius: 5px;
+    &:before {
+      content: "";
+      top: -5px;
+      left: 5px;
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-bottom: 5px solid rgb(0, 150, 136);
+    }
+  }
+
+  &__label {
+    text-align: left;
+    letter-spacing: 1.1px;
+    color: #5F6568;
+    min-width: 100px;
+  }
+
+  &__field {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    .MuiInputAdornment-root {
+      color: #0000008a;
+    }
+    .form-select {
+      width: 100%;
+      font-family: 'Lato', sans-serif;
+    }
+    &-item {
+      margin: 0;
+      input {
+        letter-spacing: 0.48px;
+        font-size: 14px;
+      }
+      .Mui-disabled {
+        background-color: #f2f2f2;
+        .MuiOutlinedInput-notchedOutline {
+          border-color: #e6e6e6 !important;
+        }
+      }
+    }
+  }
+
+  &__field-item {
+    width: 100%
+  }
+
+  &__minmax {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  &__minmax-separator {
+    padding: 0 10px;
+
+    .separator {
+      display: block;
+      height: 100%;
+    }
+  }
+}
