@@ -47,7 +47,27 @@ app.use(express.static(path.join(__dirname, '..', '..', 'dist')))
  * @todo webpack-server.config.js
  */
 
-app.get('/', (req, res) => {
+// app.get('/race/:date/:location/:time', (req, res) => {
+//   const title = req.url['date']
+// })
+
+// app.get('/dashboard', (req, res) => {
+//   const html = `<div>DASHBOARD</div>`
+//   // const state = setState()
+//   // const url = req.url
+//   const title = 'dashboard'
+//   res.send(HTMLShell(html, title))
+// })
+
+// app.get('/history/*', (req, res) => {
+//   const html = `<div>HISTORY</div>`
+//   // const state = setState()
+//   // const url = req.url
+//   const title = 'history'
+//   res.send(HTMLShell(html, title))
+// })
+
+app.get('**', (req, res) => {
   /*let html = render(
         <Provider store={store}>
           <Router />
@@ -61,13 +81,6 @@ app.get('/', (req, res) => {
   const html = `<div>SHOUDLD WE HYDRATE THIS?</div>`
   // const state = setState()
   const title = 'ROOT'
-  res.send(HTMLShell(html, title))
-})
-
-app.get('/dashboard', (req, res) => {
-  const html = `<div>DASHBOARD</div>`
-  // const state = setState()
-  const title = 'dashboard'
   res.send(HTMLShell(html, title))
 })
 
